@@ -44,6 +44,9 @@ public class Instatiation implements CommandLineRunner {
 		
 		
 		postRepository.saveAll(Arrays.asList(post1, post2));
+		
+		marly.getPosts().addAll(Arrays.asList(post1,post2));
+		userRepository.save(marly);
 	}
 
 }
